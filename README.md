@@ -173,7 +173,7 @@ A tag <code>a</code> serve como link para outras páginas e urls. No valor do at
 
 Terminamos toda estrutura HTML! Até agora, nossa página ficou assim:
 
-![](/assets\pagina_html.png)
+![](/assets/pagina_html.png)
 
 Por enquanto, nada está em seu devido lugar, mas vamos mudar isso com o poderoso CSS.
 
@@ -221,7 +221,7 @@ Em nossa <code>div</code> <b>container</b> iremos aplicar as seguintes estiliza�
 
 Apenas com esses códigos, temos:
 
-![](/assets\pagina_css1.png)
+![](/assets/pagina_css1.png)
 <br>
 <br>
 Agora, no elemento <b>img-side</b> e na imagem, aplicaremos:
@@ -320,7 +320,7 @@ color: #E0AAFF;
 <br>
 
 No fim, teremos nossa página completa:
-![](/assets\pagina_css2.png)
+![](/assets/pagina_css2.png)
 
 <br>
 <br>
