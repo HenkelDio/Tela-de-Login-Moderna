@@ -173,7 +173,7 @@ A tag <code>a</code> serve como link para outras páginas e urls. No valor do at
 
 Terminamos toda estrutura HTML! Até agora, nossa página ficou assim:
 
-![](assets\pagina_html.png)
+![](pagina_html.png)
 
 Por enquanto, nada está em seu devido lugar, mas vamos mudar isso com o poderoso CSS.
 
