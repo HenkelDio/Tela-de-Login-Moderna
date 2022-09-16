@@ -1,3 +1,5 @@
+![](/assets/pagina_css2.png)
+
 # Criando uma tela de login moderna
 
 Esse guia deseja ensinar como construir uma tela de login do zero com ferramentas gratuitas.<br>
@@ -320,6 +322,7 @@ color: #E0AAFF;
 <br>
 
 No fim, teremos nossa página completa:
+
 ![](/assets/pagina_css2.png)
 
 <br>
