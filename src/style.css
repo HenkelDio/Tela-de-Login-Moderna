@@ -1,0 +1,96 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #10002B;  /* cor de fundo*/
+    font-family: 'Segoe UI';      /*fonte*/
+
+}
+
+.container{
+    width: 1100px;           /*largura do elemento*/
+    height: 600px;           /*tamanho do elemento*/
+    padding: 50px 50px;      /*margem interna: 50px em cima e em baixo e 50px dos lados*/
+    margin: 80px auto;       /*centralizar elemento e 80px de margem externa em cima e em baixo*/
+    display: flex;           
+    align-items: center;     
+    border-radius: 20px;     /*arredondamento das bordas de 20px*/
+    background-color: #5A189A;
+    box-shadow: 2px 2px 5px 5px rgb(19, 19, 19);
+}
+
+.container .img-side{
+    width: 50%;           /*largura com metade da largura da div container*/
+    margin-right: 100px;  /*margem externa a direita de 100px*/
+}
+
+.container .img-side img{
+    width: 100%;          /*100% de tamanho dentro da div img-side */
+}
+
+
+.container .form-side{
+    text-align: center;       /*centralizar todos os textos do elemento*/
+    height: 350px;            
+    color: white;           /*cor do texto da div*/
+}
+
+.container .form-side .titulo{
+    margin-bottom:30px;       /*margim externa para baixo de 30px*/
+}
+
+.container .form-side .titulo h2{
+    font-size: 40px;          /*tamanho de fonte*/
+}
+
+.container .form-side .titulo p{
+    color: #e5b8ff;
+}
+
+
+.container .form-side form{
+    display:inline-block;       
+    width: 400px;    
+    text-align: left;         
+}
+
+.container .form-side form label{
+    font-weight: bold;             /*aplicar negrito no texto*/
+    color: #E0AAFF;
+}
+
+.in-email, .in-password{           /*acessando os inputs*/
+    width: 400px;
+    height: 40px;
+    padding-left: 20px;            /*margem interna a esquerda de 20px*/
+    outline: none;                 /*borda externa desabilitada*/
+    margin-bottom: 20px;        
+    font-weight: 600;              /*peso da fonte em 600*/     
+    border-radius: 5px;                 
+    border: none;                  /*borda desabilitada*/
+}
+
+.sub-entrar{
+    width: 400px;
+    height: 40px;
+    border-radius: 10px;
+    border: none;
+    font-weight: bold; 
+    font-size: 20px;  
+    cursor: pointer;      
+    color: #3C096C;
+    background-color: #C77DFF;
+    margin-bottom: 20px;
+}
+
+.container .form-side .link{
+    color: white;
+}
+
+
+.container .form-side .link a{
+    color: #E0AAFF;
+}
