@@ -2,8 +2,8 @@
 
 # Criando uma tela de login moderna
 
-Esse guia deseja ensinar como construir uma tela de login do zero com ferramentas gratuitas.<br>
-Será usado trechos de código, comentários e imagens para explicação.<br>
+Esse guia deseja ensiná-lo como construir uma tela de login do zero com ferramentas gratuitas.<br>
+Serão usados trechos de código, comentários e imagens para explicação.<br>
 Usaremos as tecnologias HTML5 e CSS3 para a construção da aplicação.<br>
 
 (Esse guia é apenas Front-End, sem a utilização de Back-End. Apenas estilização e montagem)
@@ -15,9 +15,13 @@ Usaremos as tecnologias HTML5 e CSS3 para a construção da aplicação.<br>
 
 # Iniciando
 
-Coloquei todos os códigos na pasta "src". Então, caso precise acesse o código completo.<br>
-Haverá algumas situações, onde o trecho do código não será explicado, por questões de não se aplicar a esse guia.<br>
+Coloquei todos os códigos na pasta "src" para o acesso ao código completo.<br>
+Haverá algumas situações onde o trecho do código não será explicado, por questões de não se aplicar a esse guia.<br>
 Todas as imagens usadas estão na pasta "assets".
+<br>
+Abra uma pasta para armazenar seus arquivos, ela deverá parecer com isso:
+
+![](/assets/ex.png)
 
 # Começando pelo HTML
 
@@ -32,6 +36,7 @@ Vamos iniciar adicionando o HTML em nossa página, ou seja, a estrutura do nosso
     <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!--para página ser suportada no Internet Explorer-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--Ajuda na resposividade do site-->
     <title>Tela de Login</title>
+    <link rel="stylesheet" href="style.css">  <!--habilitando acesso ao css-->
 </head>
 <body>
 
@@ -60,7 +65,7 @@ Dentro da tag <code>body</code>, adicionaremos uma <code>div</code> com a <code>
 </html>
 ```
 
-A tag <code>div</code> tem como objetivo separar e organizar o conteúdo da página, como se fosses "caixinhas" com itens dentro.<br>
+A tag <code>div</code> tem como objetivo separar e organizar o conteúdo da página, como se fossem "caixinhas" com itens dentro.<br>
 Já o atributo <code>class</code> coloca um identificador na <code>div</code>, mas tenha cuidado, esse identificador não é único. Para adicionarmos um identificador único, usamos o atributo <code>id</code>.
 <br>
 <br>
@@ -83,10 +88,10 @@ Agora, vamos adicionar mais duas <code>div</code> dentro da <code>div</code> <b>
 </body>
 ```
 
-A <code>div</code> <b>img-side</b> vai ser onde aplicaremos uma imagem e uma cor de fundo. Enquanto, a <b>form-side</b> será o lado que montaremos o formulário para o usuário preencher.
+A <code>div</code> <b>img-side</b> vai ser onde aplicaremos uma imagem. Enquanto, a <b>form-side</b> será o lado que montaremos o formulário para o usuário preencher.
 <br>
 <br>
-Vamos colocar nosso primeiro elemento em nossa página!
+Vamos colocar nossa primeira imagem em nossa página!
 
 ```
 <body>
@@ -156,7 +161,7 @@ O elemento <code>input</code> tem vários tipos, como os que foram usados dentro
 <br>
 <br>
 
-Por fim, adicionaremos duas tags <code>a</code> abaixo do elemento <code>form</code>.
+Por fim, adicionaremos duas tags <code>a</code> abaixo do elemento <code>form</code> dentro de uma <code>div</code> com a <code>class</code> <b>link</b>.
 
 ```
 <form>
@@ -166,10 +171,10 @@ Por fim, adicionaremos duas tags <code>a</code> abaixo do elemento <code>form</c
     <input type="password" name="in-password" class="in-password">
     <input type="submit" value="Entrar" class="sub-entrar">
 </form>
-<div><a href="#">Esqueci minha senha</a> ou <a href="#">Já tenho cadastro</a></div>
+<div class="link"><a href="#">Esqueci minha senha</a> ou <a href="#">Já tenho cadastro</a></div>
 ```
 
-A tag <code>a</code> serve como link para outras páginas e urls. No valor do atributo <code>href</code> é passado o destino, como não temos nenhum, podemos colocar "#".
+A tag <code>a</code> serve como link e nos leva para outras páginas e sites. No valor do atributo <code>href</code> é passado o destino, como não temos nenhum, podemos colocar "#".
 <br>
 <br>
 
@@ -179,9 +184,52 @@ Terminamos toda estrutura HTML! Até agora, nossa página ficou assim:
 
 Por enquanto, nada está em seu devido lugar, mas vamos mudar isso com o poderoso CSS.
 
+<br>
+<br>
+
+O código HTML deve ter ficado mais ou menos assim:
+
+```
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tela de Login</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+
+        <div class="img-side">
+            <img src="/assets/mulher.png" alt="mulher">
+        </div>
+        <div class="form-side">
+            <div class="titulo">
+                <h2>Seja bem-vindo(a)!</h2>
+                <p>Digite suas credencias para entrar em mundo mágico!</p>
+            </div>
+            <form>
+                <label for="in-email">Seu e-mail</label>
+                <input type="email" name="in-email" class="in-email">
+                <label for="in-password">Sua senha</label>
+                <input type="password" name="in-password" class="in-password">
+                <input type="button" value="Entrar" class="sub-entrar">
+            </form>
+            <div class="link"><a href="#">Esqueci minha senha</a> ou <a href="#">Já tenho cadastro</a></div>
+        </div>
+
+    </div>
+
+</body>
+</html>
+```
+
 # Estilização com CSS
 
-Vamos abrir o arquivo de CSS e como estrutuda padrão, aplicaremos o seguinte código:
+Vamos abrir o arquivo de CSS e para estrutura padrão, aplicaremos o seguinte código:
 
 ```
 *{
@@ -327,3 +375,105 @@ No fim, teremos nossa página completa:
 
 <br>
 <br>
+
+O código CSS deve ter ficado mais ou menos assim:
+
+```
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #10002B;  /* cor de fundo*/
+    font-family: 'Segoe UI';      /*fonte*/
+
+}
+
+.container{
+    width: 1100px;           /*largura do elemento*/
+    height: 600px;           /*tamanho do elemento*/
+    padding: 50px 50px;      /*margem interna: 50px em cima e em baixo e 50px dos lados*/
+    margin: 80px auto;       /*centralizar elemento e 80px de margem externa em cima e em baixo*/
+    display: flex;
+    align-items: center;
+    border-radius: 20px;     /*arredondamento das bordas de 20px*/
+    background-color: #5A189A;
+    box-shadow: 2px 2px 5px 5px rgb(19, 19, 19);
+}
+
+.container .img-side{
+    width: 50%;           /*largura com metade da largura da div container*/
+    margin-right: 100px;  /*margem externa a direita de 100px*/
+}
+
+.container .img-side img{
+    width: 100%;          /*100% de tamanho dentro da div img-side */
+}
+
+
+.container .form-side{
+    text-align: center;       /*centralizar todos os textos do elemento*/
+    height: 350px;
+    color: white;           /*cor do texto da div*/
+}
+
+.container .form-side .titulo{
+    margin-bottom:30px;       /*margim externa para baixo de 30px*/
+}
+
+.container .form-side .titulo h2{
+    font-size: 40px;          /*tamanho de fonte*/
+}
+
+.container .form-side .titulo p{
+    color: #e5b8ff;
+}
+
+
+.container .form-side form{
+    display:inline-block;
+    width: 400px;
+    text-align: left;
+}
+
+.container .form-side form label{
+    font-weight: bold;             /*aplicar negrito no texto*/
+    color: #E0AAFF;
+}
+
+.in-email, .in-password{           /*acessando os inputs*/
+    width: 400px;
+    height: 40px;
+    padding-left: 20px;            /*margem interna a esquerda de 20px*/
+    outline: none;                 /*borda externa desabilitada*/
+    margin-bottom: 20px;
+    font-weight: 600;              /*peso da fonte em 600*/
+    border-radius: 5px;
+    border: none;                  /*borda desabilitada*/
+}
+
+.sub-entrar{
+    width: 400px;
+    height: 40px;
+    border-radius: 10px;
+    border: none;
+    font-weight: bold;
+    font-size: 20px;
+    cursor: pointer;
+    color: #3C096C;
+    background-color: #C77DFF;
+    margin-bottom: 20px;
+}
+
+.container .form-side .link{
+    color: white;
+}
+
+
+.container .form-side .link a{
+    color: #E0AAFF;
+}
+
+```
